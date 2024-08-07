@@ -11,6 +11,13 @@ build: ## Build executables
 test:
 test: ## Test rbtree implementation
 	$(MAKE) -C test test
+
+debug:
+debug: ## for vscode debug
+	$(MAKE) -C src clean
+	$(MAKE) -C test clean
+	$(MAKE) -C src
+	${MAKE} -C test debug
 	
 clean:
 clean: ## Clear build environment
